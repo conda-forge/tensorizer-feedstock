@@ -1,5 +1,5 @@
 context:
-  version: "2.9.3"
+  version: "2.10.0"
 
 package:
   name: tensorizer
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/t/tensorizer/tensorizer-${{ version }}.tar.gz
-    sha256: 8d47067e8840d00f57e38d0c069ffee842aa0db63d8ba64c1817d7a5f6a1fb82
+    sha256: 7b986b358075736a2dce7dd0d2c8779060d4ac5975d8674a604f220befa7d210
 
 build:
   noarch: python
@@ -59,6 +59,8 @@ tests:
         then:
           # Skip test_download_url until <https://github.com/coreweave/tensorizer/pull/188> is merged.
           - pytest tests -vvv --reruns 2 --deselect tests/test_stream_io.py::TestS3::test_download_url
+        else:
+          - echo Skipping tests
 
 about:
   homepage: https://github.com/coreweave/tensorizer
