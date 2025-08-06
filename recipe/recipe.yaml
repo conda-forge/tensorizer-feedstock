@@ -1,5 +1,5 @@
 context:
-  version: "2.11.0"
+  version: "2.11.1"
 
 package:
   name: tensorizer
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/t/tensorizer/tensorizer-${{ version }}.tar.gz
-    sha256: 5f726594656459974219c001bad6dcca6d3d441d47b9f12b342ba9686a98f45a
+    sha256: 88bff9576447b6c3c798884b171f57b6ed548d061ff2e4fc4a8516d767893525
 
 build:
   noarch: python
